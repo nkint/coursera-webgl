@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+  <title>Assignment 1</title>
+  <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:300,500,700' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+  body {
+    background-color: #f3eee8;
+  }
+  .title {
+    font-family: 'Terminal Dosis', sans-serif;
+  }
+  </style>
+  
+  <!------------------------------------------------------------------------>
+  <script id="vertex-shader" type="x-shader/x-vertex">
+
+  attribute vec4 vPosition;
+  attribute vec4 vColor;
+  varying vec4 fColor;
+
+  void main()
+  {
+      gl_Position = vPosition;
+      fColor = vColor;
+  }
+
+  </script>
+  <!------------------------------------------------------------------------>
+  <script id="fragment-shader" type="x-shader/x-fragment">
+
+  precision mediump float;
+
+  varying vec4 fColor;
+
+  void main()
+  {
+      gl_FragColor = fColor;
+  }
+
+  </script>
+  <!------------------------------------------------------------------------>
+
+  <script type="text/javascript" src="../Common/webgl-utils.js"></script>
+  <script type="text/javascript" src="../Common/initShaders.js"></script>
+  <script type="text/javascript" src="../Common/MV.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.js"></script>
+  <script type="text/javascript" src="assignment1.js"></script>
+</head>   
+
+<body>
+  <div class="title">
+    Assignment 1
+  </div>
+  <canvas id="gl-canvas" width="512" height="512">
+  Oops ... your browser doesn't support the HTML5 canvas element
+  </canvas>
+
+</body>
+</html>
