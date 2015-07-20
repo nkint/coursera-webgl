@@ -1,3 +1,5 @@
+// to see the working example: https://rawgit.com/nkint/coursera-webgl/master/assignments/assignment1.html
+
 "use strict";
 
 var canvas, gui;
